@@ -217,12 +217,12 @@ function runScript() {
   if (step >= script.length) return;
   const entry = script[step];
   if (entry.from) {
-    // 💡 1초 지연 후 메시지 표시
+    // 💡 4초 지연 후 메시지 표시
     setTimeout(() => {
       showMessage(entry.from, entry.text);
       step++;
       setTimeout(runScript, 1200);
-    }, 200); // 1000ms 지연
+    }, 200); // 4000ms 지연
   } else if (entry.options) {
     showOptions(entry.options); // 선택지는 바로 표시
   }
